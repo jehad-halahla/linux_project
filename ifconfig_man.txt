@@ -14,9 +14,9 @@ EXAMPLE           >ifconfig
                           inet6 fe80::c651:89b2:3e4d:849e  prefixlen 64  scopeid
                    0x20<link>
                           ether 08:00:27:43:ca:55  txqueuelen 1000  (Ethernet)
-                          RX packets 21938  bytes 14530540 (14.5 MB)
+                          RX packets 23357  bytes 14798107 (14.7 MB)
                           RX errors 0  dropped 0  overruns 0  frame 0
-                          TX packets 15158  bytes 8336330 (8.3 MB)
+                          TX packets 16521  bytes 9373018 (9.3 MB)
                           TX errors 0  dropped 0 overruns 0  carrier 0  collisio
                   ns 0
                   lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536

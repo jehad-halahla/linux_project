@@ -17,9 +17,9 @@ EXAMPLE           >find
                   ./cp_man.txt
                   ./lspci_man.txt
                   ./lscpu_man.txt
-                  ./chown_man.txt
-                  ./sample.txt
                   ./whoami_man.txt
                   ./ifconfig_man.txt
                   ./id_man.txt
+                  ./.gitignore
+                  ./mv_man.txt
 

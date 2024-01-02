@@ -1,9 +1,0 @@
-DESCRIPTION       Print the full filename of the current working directory.
-
-VERSION           uname (GNU coreutils) 8.32
-
-RELATED COMMANDS  getcwd
-
-EXAMPLE           >pwd
-                  /home/jehad/linux_project
-

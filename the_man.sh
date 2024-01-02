@@ -141,8 +141,9 @@ printf "%-16s\t${ver}" "VERSION" | column -t -W 2 -s$'\t'
 
 action=$1
 command=$2
-
-if [ $# -ne 2 ];then
+if [ $# -eq 0 ];then
+printf "${RED}USAGE${NC}: there should be 2 arguments -> [ACTION] [COMMAND] or One argument -> [ACTION]\n"
+elif [ $# -ne 2 ];then
 case $action in
 [Bb][Aa][Tt][Cc][Hh]-[Gg][Ee][Nn][Ee][Rr][Aa][Tt][Ee])
 ./test_all.sh
@@ -155,17 +156,52 @@ if [ "$answer" == "c" ]
 then
 printf "enter the command you want to search for: \n"
 read comm
+if check_command_valid $comm
+then
+printf "${GREEN}command is valid${NC}\n\n"
+if cat ${comm}_man.txt 2> /dev/null
+then 
+echo $comm > /tmp/history.txt
+:
+else
+printf "command manual doesn't exist, you can generate it by running the following:\n"
+printf ">${BOLD}./the_man.sh generate $comm${NC}\n"
+fi
+fi
 elif [ "$answer" == "k" ]
 then
 printf "enter the keyword you want to search for: \n"
 read key
+if grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | tr $'\n' ' ' > /dev/null 2> /dev/null
+then
+printf "${GREEN}RELATED FILES${NC}\n\n"
+printf "${BOLD}"
+grep "\<$key\>" *_man.txt | cut -d':' -f1 | sort | uniq | nl
+grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | nl > /tmp/related.txt
+printf "\nto display a manual just enter the number coresponding the file\n"
+printf "\nto display all manuals just enter ${BOLD}all${NC}\n"
+printf "${NC}\n"
+read choice
+$count=$(cat /tmp/related.txt | wc -l) 2> /dev/null
+if [ "$choice" == "all"  -a $count -gt 0 ] 2> /dev/null
+then
+cat $(cat /tmp/related.txt) 2> /dev/null
+elif grep "$choice" /tmp/related.txt > /dev/null 2> /dev/null
+then
+cat $(grep $choice /tmp/related.txt | sed 's/^[ \t]*//' | rev | cut -d$'\t' -f1 | rev)
+else
+printf "${RED}${BOLD}invalid input${NC}\n"
+
+fi
+fi
 else
 printf "${RED}${BOLD}invalid input${NC}\n"
 fi
 ;;
 *)
  # check if a valid number of arguments is passed
-printf "${RED}USAGE${NC}: there should be 2 arguments -> [ACTION] [COMMAND]\n"
+printf "${GREEN}AVAILABLE ACTIONS FOR A 1 ARGUMENT RUN${NC}\n"
+printf "\n${BOLD}batch-generate search recommend${NC}\n\nabove options are case insensitive\n"
 exit 4 # in case not enough args
 ;;
 esac
@@ -185,7 +221,7 @@ printf "\n" >> ${command}_man.txt
 #now we will use the function that generates an example
 gen_example $command >> ${command}_man.txt
 printf "\n" >> ${command}_man.txt
-
+cat ${command}_man.txt 2> /dev/null
 ;;
 [Vv][Ee][Rr][Ii][Ff][Yy])
 ## here we verify our results
@@ -196,7 +232,7 @@ printf "\n" >> ${command}_man.txt
 ;;
 *)
 printf "${RED}ERROR${NC}: [ACTION] is not a valid action, a list of valid actions:\n"
-printf "\n${BOLD}Generate verify search recommend${NC}\n\nabove options are case insensitive\n"
+printf "\n${BOLD}Generate verify${NC}\n\nabove options are case insensitive\n"
 exit 3 # for a not valid action
 ;;
 esac

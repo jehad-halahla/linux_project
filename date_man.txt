@@ -7,5 +7,5 @@ RELATED COMMANDS  aa,apport,apport,asctime,asctime_r,catman,chgpasswd,chpasswd,c
                   rypt_checksalt,ctime
 
 EXAMPLE           >date
-                  Tue Jan  2 06:16:16 PM IST 2024
+                  Tue Jan  2 06:30:15 PM IST 2024
 

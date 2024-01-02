@@ -12,9 +12,9 @@ RELATED COMMANDS  bdflush,bdftopcf,bdftruncate,dpkg,dpkg,dvipdf,endfsent
 
 EXAMPLE           >df
                   Filesystem     1K-blocks     Used Available Use% Mounted on
-                  tmpfs             305348     1572    303776   1% /run
-                  /dev/sda3       30267332 17224204  11480300  61% /
-                  tmpfs            1526736    19772   1506964   2% /dev/shm
+                  tmpfs             305348     1576    303772   1% /run
+                  /dev/sda3       30267332 17225008  11479496  61% /
+                  tmpfs            1526736    23116   1503620   2% /dev/shm
                   tmpfs               5120        4      5116   1% /run/lock
                   /dev/sda2         524252     6220    518032   2% /boot/efi
                   tmpfs             305344      124    305220   1% /run/user/100

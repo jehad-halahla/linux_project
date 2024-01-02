@@ -7,14 +7,14 @@ RELATED COMMANDS  adduser.conf,modules,a2dismod,a2enmod,accessdb,addseverity,add
                   user,arp
 
 EXAMPLE           >du
-                  8  ./.git/objects/25
-                  8  ./.git/objects/eb
-                  4  ./.git/objects/pack
-                  8  ./.git/objects/63
-                  8  ./.git/objects/54
-                  8  ./.git/objects/3f
-                  8  ./.git/objects/85
-                  4  ./.git/objects/66
-                  8  ./.git/objects/82
-                  4  ./.git/objects/96
+                  8   ./.git/objects/eb
+                  12  ./.git/objects/f8
+                  8   ./.git/objects/93
+                  4   ./.git/objects/pack
+                  8   ./.git/objects/d7
+                  8   ./.git/objects/d2
+                  8   ./.git/objects/96
+                  8   ./.git/objects/41
+                  8   ./.git/objects/3b
+                  8   ./.git/objects/f4
 
