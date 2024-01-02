@@ -159,9 +159,9 @@ read comm
 if check_command_valid $comm
 then
 printf "${GREEN}command is valid${NC}\n\n"
+echo $comm >> /tmp/history.txt
 if cat ${comm}_man.txt 2> /dev/null
 then 
-echo $comm > /tmp/history.txt
 :
 else
 printf "command manual doesn't exist, you can generate it by running the following:\n"
@@ -176,14 +176,14 @@ if grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | tr $'\n' ' ' > /dev/nul
 then
 printf "${GREEN}RELATED FILES${NC}\n\n"
 printf "${BOLD}"
-grep "\<$key\>" *_man.txt | cut -d':' -f1 | sort | uniq | nl
+grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | nl
 grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | nl > /tmp/related.txt
 printf "\nto display a manual just enter the number coresponding the file\n"
 printf "\nto display all manuals just enter ${BOLD}all${NC}\n"
 printf "${NC}\n"
 read choice
 $count=$(cat /tmp/related.txt | wc -l) 2> /dev/null
-if [ "$choice" == "all"  -a $count -gt 0 ] 2> /dev/null
+if [ "$choice" == "all" ] 2> /dev/null
 then
 cat $(cat /tmp/related.txt) 2> /dev/null
 elif grep "$choice" /tmp/related.txt > /dev/null 2> /dev/null
@@ -197,6 +197,12 @@ fi
 else
 printf "${RED}${BOLD}invalid input${NC}\n"
 fi
+;;
+[Rr][Ee][Cc][Oo][Mm][Mm][Ee][Nn][Dd])
+#here we will top 5 commands from the history file
+printf "\n"
+printf "${GREEN}${BOLD}TOP 5 SEARCHED COMMANDS${NC}\n\n"
+cat /tmp/history.txt | sort | uniq -c | sort -nr | head -5
 ;;
 *)
  # check if a valid number of arguments is passed
