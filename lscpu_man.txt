@@ -1,0 +1,27 @@
+DESCRIPTION       lscpu gathers CPU architecture information from sysfs, /proc/c
+                  puinfo and any applicable architecture-specific libraries (e.g
+                  . librtas on Powerpc). The command output can be optimized for
+                   parsing or for easy readability by humans. The information in
+                  cludes, for example, the number of CPUs, threads, cores, socke
+                  ts, and Non-Uniform Memory Access (NUMA) nodes. There is also 
+                  information about the CPU caches and cache sharing, family, mo
+                  del, bogoMIPS, byte order, and stepping.
+
+VERSION           lscpu from util-linux 2.37.2
+
+RELATED COMMANDS  chcpu
+
+EXAMPLE           >lscpu
+                  Architecture:                       x86_64
+                  CPU op-mode(s):                     32-bit, 64-bit
+                  Address sizes:                      39 bits physical, 48 bits 
+                  virtual
+                  Byte Order:                         Little Endian
+                  CPU(s):                             4
+                  On-line CPU(s) list:                0-3
+                  Vendor ID:                          GenuineIntel
+                  Model name:                         11th Gen Intel(R) Core(TM)
+                   i7-1165G7 @ 2.80GHz
+                  CPU family:                         6
+                  Model:                              140
+

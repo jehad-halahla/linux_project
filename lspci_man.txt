@@ -1,0 +1,27 @@
+DESCRIPTION       lspci is a utility for displaying information about PCI buses 
+                  in the system and devices connected to them.
+
+VERSION           lspci version 3.7.0
+
+RELATED COMMANDS  setpci,pciids,update-pciids,pcilib
+
+EXAMPLE           >lspci
+                  00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Na
+                  toma] (rev 02)
+                  00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natom
+                  a/Triton II]
+                  00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 I
+                  DE (rev 01)
+                  00:02.0 VGA compatible controller: VMware SVGA II Adapter
+                  00:03.0 Ethernet controller: Intel Corporation 82540EM Gigabit
+                   Ethernet Controller (rev 02)
+                  00:04.0 System peripheral: InnoTek Systemberatung GmbH Virtual
+                  Box Guest Service
+                  00:05.0 Multimedia audio controller: Intel Corporation 82801AA
+                   AC'97 Audio Controller (rev 01)
+                  00:06.0 USB controller: Apple Inc. KeyLargo/Intrepid USB
+                  00:07.0 Bridge: Intel Corporation 82371AB/EB/MB PIIX4 ACPI (re
+                  v 08)
+                  00:0b.0 USB controller: Intel Corporation 82801FB/FBM/FR/FW/FR
+                  W (ICH6 Family) USB2 EHCI Controller
+

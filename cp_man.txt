@@ -1,0 +1,10 @@
+DESCRIPTION       Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+VERSION           cp (GNU coreutils) 8.32
+
+RELATED COMMANDS  acpi_listen,acpid,chcpu,clnttcp_create,rpc_soc,clock_getcpuclo
+                  ckid
+
+EXAMPLE           >cp /tmp/cp.txt /tmp/cp_copy.txt
+                  -rw-rw-r-- /tmp/cp_copy.txt
+

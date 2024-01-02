@@ -1,0 +1,11 @@
+DESCRIPTION       Display the current time in the given FORMAT, or set the syste
+                  m date.
+
+VERSION           date (GNU coreutils) 8.32
+
+RELATED COMMANDS  aa,apport,apport,asctime,asctime_r,catman,chgpasswd,chpasswd,c
+                  rypt_checksalt,ctime
+
+EXAMPLE           >date
+                  Tue Jan  2 06:16:16 PM IST 2024
+

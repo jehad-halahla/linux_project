@@ -1,0 +1,10 @@
+DESCRIPTION       Print the user name associated with the current effective user
+                   ID. Same as id -un.
+
+VERSION           whoami (GNU coreutils) 8.32
+
+RELATED COMMANDS  rmdir,touch
+
+EXAMPLE           >whoami
+                  jehad
+

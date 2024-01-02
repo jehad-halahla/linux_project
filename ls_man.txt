@@ -1,0 +1,21 @@
+DESCRIPTION       List information about the FILEs (the current directory by def
+                  ault). Sort entries alphabetically if none of -cftuvSUX nor --
+                  sort is spec‐ ified.
+
+VERSION           ls (GNU coreutils) 8.32
+
+RELATED COMMANDS  aconnect,add,afs_syscall,alsa,alsabat,alsactl,alsactl_init,als
+                  aloop,alsamixer
+
+EXAMPLE           >ls
+                  chgrp_man.txt
+                  chmod_man.txt
+                  chown_man.txt
+                  commands.txt
+                  cp_man.txt
+                  date_man.txt
+                  df_man.txt
+                  du_man.txt
+                  echo_man.txt
+                  env_man.txt
+

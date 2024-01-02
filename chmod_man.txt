@@ -1,0 +1,13 @@
+DESCRIPTION       This manual page documents the GNU version of chmod. chmod cha
+                  nges the file mode bits of each given file according to mode, 
+                  which can be either a symbolic representation of changes to ma
+                  ke, or an octal number representing the bit pattern for the ne
+                  w mode bits.
+
+VERSION           chmod (GNU coreutils) 8.32
+
+RELATED COMMANDS  fchmod,fchmodat
+
+EXAMPLE           >chmod 777 /tmp/chmod.txt
+                  -rwxrwxrwx /tmp/chmod.txt
+

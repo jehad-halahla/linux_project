@@ -1,0 +1,16 @@
+DESCRIPTION       ps displays information about a selection of the active proces
+                  ses. If you want a repetitive update of the selection and the 
+                  displayed information, use top instead.
+
+VERSION           ps from procps-ng 3.3.17
+
+RELATED COMMANDS  pgrep,pstree,top,proc
+
+EXAMPLE           >ps
+                      PID TTY          TIME CMD
+                     4239 pts/1    00:00:01 bash
+                    25277 pts/1    00:00:00 bash
+                    25278 pts/1    00:00:00 bash
+                    25359 pts/1    00:00:00 bash
+                    25462 pts/1    00:00:00 ps
+

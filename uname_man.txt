@@ -1,0 +1,9 @@
+DESCRIPTION       Print certain system information. With no OPTION, same as -s.
+
+VERSION           uname (GNU coreutils) 8.32
+
+RELATED COMMANDS  arch,uname
+
+EXAMPLE           >uname
+                  Linux
+

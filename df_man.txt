@@ -1,0 +1,22 @@
+DESCRIPTION       This manual page documents the GNU version of df. df displays 
+                  the amount of disk space available on the file system containi
+                  ng each file name argument. If no file name is given, the spac
+                  e available on all currently mounted file systems is shown. Di
+                  sk space is shown in 1K blocks by default, unless the environm
+                  ent variable POSIXLY_CORRECT is set, in which case 512-byte bl
+                  ocks are used.
+
+VERSION           df (GNU coreutils) 8.32
+
+RELATED COMMANDS  bdflush,bdftopcf,bdftruncate,dpkg,dpkg,dvipdf,endfsent
+
+EXAMPLE           >df
+                  Filesystem     1K-blocks     Used Available Use% Mounted on
+                  tmpfs             305348     1572    303776   1% /run
+                  /dev/sda3       30267332 17224204  11480300  61% /
+                  tmpfs            1526736    19772   1506964   2% /dev/shm
+                  tmpfs               5120        4      5116   1% /run/lock
+                  /dev/sda2         524252     6220    518032   2% /boot/efi
+                  tmpfs             305344      124    305220   1% /run/user/100
+                  0
+

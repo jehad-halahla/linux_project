@@ -1,0 +1,16 @@
+DESCRIPTION       free displays the total amount of free and used physical and s
+                  wap memory in the system, as well as the buffers and caches us
+                  ed by the ker‐ nel. The information is gathered by parsing /pr
+                  oc/meminfo. The displayed columns are:
+
+VERSION           free from procps-ng 3.3.17
+
+RELATED COMMANDS  ps,slabtop,top,vmstat,2018-05-31
+
+EXAMPLE           >free
+                                 total        used        free      shared  buff
+                  /cache   available
+                  Mem:         3053472     2066344      102476       65504      
+                  884652      753156
+                  Swap:        2875388       52280     2823108
+

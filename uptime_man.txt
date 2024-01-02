@@ -1,0 +1,12 @@
+DESCRIPTION       uptime gives a one line display of the following information. 
+                  The current time, how long the system has been running, how ma
+                  ny users are currently logged on, and the system load averages
+                   for the past 1, 5, and 15 minutes.
+
+VERSION           uptime from procps-ng 3.3.17
+
+RELATED COMMANDS  ps,top,utmp,w
+
+EXAMPLE           >uptime
+                   18:16:17 up  1:33,  1 user,  load average: 0.72, 0.92, 1.30
+
