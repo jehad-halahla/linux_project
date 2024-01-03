@@ -2,11 +2,10 @@
 
 ## Project Overview
 
-This project, developed by Jehad Halahla as part of the Electrical & Computer Engineering Department at the Faculty of Engineering & Technology, provides a script named "the_man.sh" that facilitates the generation, search, recommendation, and verification of command documentation in a Linux environment.
+This project, developed by me as part of the Electrical & Computer Engineering Department at the Faculty of Engineering & Technology, provides a script named "the_man.sh" that facilitates the generation, search, recommendation, and verification of command documentation in a Linux environment.
 
 ### Project Details
 
-- **Project ID:** 1
 - **Student ID:** 1201467
 - **Instructor:** Dr. Amr Slimi
 - **T.A:** Tareq Zidan
