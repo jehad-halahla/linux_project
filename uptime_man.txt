@@ -8,5 +8,5 @@ VERSION           uptime from procps-ng 3.3.17
 RELATED COMMANDS  ps,top,utmp,w
 
 EXAMPLE           >uptime
-                   18:30:16 up  1:47,  1 user,  load average: 3.64, 2.02, 1.40
+                   21:42:14 up 6 min,  1 user,  load average: 2.39, 2.04, 1.02
 

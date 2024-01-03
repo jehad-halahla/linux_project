@@ -8,9 +8,9 @@ RELATED COMMANDS  pgrep,pstree,top,proc
 
 EXAMPLE           >ps
                       PID TTY          TIME CMD
-                     4239 pts/1    00:00:01 bash
-                    31857 pts/1    00:00:00 bash
-                    31858 pts/1    00:00:00 bash
-                    31941 pts/1    00:00:00 bash
-                    32056 pts/1    00:00:00 ps
+                     4228 pts/1    00:00:00 bash
+                     5944 pts/1    00:00:00 bash
+                     5945 pts/1    00:00:00 bash
+                     6027 pts/1    00:00:00 bash
+                     6118 pts/1    00:00:00 ps
 

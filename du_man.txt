@@ -11,10 +11,10 @@ EXAMPLE           >du
                   12  ./.git/objects/f8
                   8   ./.git/objects/93
                   4   ./.git/objects/pack
+                  8   ./.git/objects/1c
                   8   ./.git/objects/d7
+                  16  ./.git/objects/fd
+                  8   ./.git/objects/1e
                   8   ./.git/objects/d2
                   8   ./.git/objects/96
-                  8   ./.git/objects/41
-                  8   ./.git/objects/3b
-                  8   ./.git/objects/f4
 

@@ -15,13 +15,13 @@ printf "\n" >> /tmp/verify/${command}_man.txt
 gen_example $command >> /tmp/verify/${command}_man.txt
 printf "\n" >> /tmp/verify/${command}_man.txt
 cat /tmp/verify/${command}_man.txt
-diff --color=always -s /tmp/verify/${command}_man.txt ${command}_man.txt
+diff --color=always -s /tmp/verify/${command}_man.txt ${command}_man.txt #this line highlights the difference 
 else
 printf "do you want to generate the manual for the command? [y/n]: "
 read answer
 if [ "$answer" == "y" ]
 then
-./the_man.sh generate $command
+./the_man.sh generate $command #generate the command manual if it doesn't exist
 else
 printf "ok, your loss\n"
 fi

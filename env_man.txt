@@ -6,8 +6,8 @@ RELATED COMMANDS  sigaction,sigprocmask,signal
 
 EXAMPLE           >env
                   SHELL=/bin/bash
-                  SESSION_MANAGER=local/jehad-ubuntu:@/tmp/.ICE-unix/2411,unix/j
-                  ehad-ubuntu:/tmp/.ICE-unix/2411
+                  SESSION_MANAGER=local/jehad-ubuntu:@/tmp/.ICE-unix/2409,unix/j
+                  ehad-ubuntu:/tmp/.ICE-unix/2409
                   QT_ACCESSIBILITY=1
                   COLORTERM=truecolor
                   XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg

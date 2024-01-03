@@ -10,7 +10,7 @@ RELATED COMMANDS  ps,slabtop,top,vmstat,2018-05-31
 EXAMPLE           >free
                                  total        used        free      shared  buff
                   /cache   available
-                  Mem:         3053472     2143248      123000       63940      
-                  787224      677576
-                  Swap:        2875388       66616     2808772
+                  Mem:         3053476     1797368       88960       69256     1
+                  167148     1016204
+                  Swap:        2875388       74940     2800448
 
