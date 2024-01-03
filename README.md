@@ -68,4 +68,12 @@ The `test_all.sh` script is employed in the main script to batch-generate inform
 
 # Example: Viewing search history
 cat /tmp/history.txt
+## Last Note
+```
+
+The `.txt` files in the project, such as `COMMAND_man.txt`, are the result of running the script. These files contain the generated documentation for each command and are automatically created during the execution of the project.
+
+```bash
+# Example: Viewing generated documentation for a command
+cat COMMAND_man.txt
 
