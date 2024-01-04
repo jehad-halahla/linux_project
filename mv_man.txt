@@ -1,9 +1,0 @@
-DESCRIPTION       Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
-
-VERSION           mv (GNU coreutils) 8.32
-
-RELATED COMMANDS  rename
-
-EXAMPLE           >mv /tmp/mv.txt /tmp/mv_moved.txt
-                  -rw-rw-r-- /tmp/mv_moved.txt
-

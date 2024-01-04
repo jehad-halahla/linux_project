@@ -2,6 +2,6 @@
 comm="commands.txt"
 while read -r command
 do
-./the_man.sh generate $command > ${command}_man.txt
+./the_man.sh generate $command > manuals/${command}_man.txt
 done < $comm
 

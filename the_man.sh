@@ -13,7 +13,11 @@ NC='\033[0m' # No Color
 #we will define some keywords to be used to get related commands
 ########################
 command_list="commands.txt"
-
+#if directory manuals doesn't exist then we will create it
+if [ ! -d "manuals" ]
+then
+mkdir manuals
+fi
 function gen_example(){ #this function will generate an example for the command
 local command=$1
 #here we will try to generate an example of the given command
@@ -216,18 +220,18 @@ check_command_valid $command
 case $action in
 [Gg][Ee][Nn][Ee][Rr][Aa][Tt][Ee])
 #here we generate a manual for the given command
-fetch_description $command > ${command}_man.txt
-printf "\n" >> ${command}_man.txt
+fetch_description $command > manuals/${command}_man.txt
+printf "\n" >> manuals/${command}_man.txt
 #now we will use the function that fetches the version
-fetch_version $command >> ${command}_man.txt
-printf "\n" >> ${command}_man.txt
+fetch_version $command >> manuals/${command}_man.txt
+printf "\n" >> manuals/${command}_man.txt
 #now we will use the function that fetches the related commands
-get_related $command >> ${command}_man.txt
-printf "\n" >> ${command}_man.txt
+get_related $command >> manuals/${command}_man.txt
+printf "\n" >> manuals/${command}_man.txt
 #now we will use the function that generates an example
-gen_example $command >> ${command}_man.txt
-printf "\n" >> ${command}_man.txt
-cat ${command}_man.txt 2> /dev/null
+gen_example $command >> manuals/${command}_man.txt
+printf "\n" >> manuals/${command}_man.txt
+cat manuals/${command}_man.txt 2> /dev/null
 ;;
 [Vv][Ee][Rr][Ii][Ff][Yy])
 ## here we verify our results

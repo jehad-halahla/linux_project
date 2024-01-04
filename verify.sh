@@ -2,7 +2,14 @@
 command=$1 # we will pass the command here
 #we will call the generate function for the command and store it in /tmp/${command}_man.txt
 #first we will check if the command_man exists...if it doesn,t then we will create it
-if [ -f "${command}_man.txt" -a -e "${command}_man.txt" ]
+
+#if the /tmp/verify directory doesn't exist, we will create it
+if [ ! -d "/tmp/verify" ]
+then
+mkdir /tmp/verify
+fi
+
+if [ -f "manuals/${command}_man.txt" -a -e "manuals/${command}_man.txt" ]
 then
 #we will call the functions here
 source the_man.sh v $command
@@ -15,7 +22,7 @@ printf "\n" >> /tmp/verify/${command}_man.txt
 gen_example $command >> /tmp/verify/${command}_man.txt
 printf "\n" >> /tmp/verify/${command}_man.txt
 cat /tmp/verify/${command}_man.txt
-diff --color=always -s /tmp/verify/${command}_man.txt ${command}_man.txt #this line highlights the difference 
+diff --color=always -s /tmp/verify/${command}_man.txt manuals/${command}_man.txt #this line highlights the difference 
 else
 printf "do you want to generate the manual for the command? [y/n]: "
 read answer

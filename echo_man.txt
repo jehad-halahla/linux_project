@@ -1,9 +1,0 @@
-DESCRIPTION       Echo the STRING(s) to standard output.
-
-VERSION           uname (GNU coreutils) 8.32
-
-RELATED COMMANDS  l2ping,lessecho,pam_echo,ping,ping4,ping6,xmessage
-
-EXAMPLE           >echo hello_world
-                  hello_world
-
