@@ -164,7 +164,7 @@ if check_command_valid $comm
 then
 printf "${GREEN}command is valid${NC}\n\n"
 echo $comm >> /tmp/history.txt
-if cat ${comm}_man.txt 2> /dev/null
+if cat manuals/${comm}_man.txt 2> /dev/null
 then 
 :
 else
@@ -176,12 +176,12 @@ elif [ "$answer" == "k" ]
 then
 printf "enter the keyword you want to search for: \n"
 read key
-if grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | tr $'\n' ' ' > /dev/null 2> /dev/null
+if grep "$key" manuals/*_man.txt | cut -d':' -f1 | sort | uniq | tr $'\n' ' ' > /dev/null 2> /dev/null
 then
 printf "${GREEN}RELATED FILES${NC}\n\n"
 printf "${BOLD}"
-grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | nl
-grep "$key" *_man.txt | cut -d':' -f1 | sort | uniq | nl > /tmp/related.txt
+grep "$key" manuals/*_man.txt | cut -d':' -f1 | sort | uniq | nl
+grep "$key" manuals/*_man.txt | cut -d':' -f1 | sort | uniq | nl > /tmp/related.txt
 printf "\nto display a manual just enter the number coresponding the file\n"
 printf "\nto display all manuals just enter ${BOLD}all${NC}\n"
 printf "${NC}\n"
@@ -203,7 +203,7 @@ printf "${RED}${BOLD}invalid input${NC}\n"
 fi
 ;;
 [Rr][Ee][Cc][Oo][Mm][Mm][Ee][Nn][Dd])
-#here we will top 5 commands from the history file
+#here we will display top 5 commands from the history file in /tmp directory
 printf "\n"
 printf "${GREEN}${BOLD}TOP 5 SEARCHED COMMANDS${NC}\n\n"
 cat /tmp/history.txt | sort | uniq -c | sort -nr | head -5
